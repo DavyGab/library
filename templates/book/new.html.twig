@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% set menu = 'book' %}
+
+{% block title %}Ajouter un libre{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un nouveau livre</h1>
+
+    {{ include('book/_form.html.twig') }}
+
+    <a href="{{ path('book_index') }}">Retour à la liste</a>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="application/javascript">
+        $(".tags_token").select2({
+            tags: true,
+            tokenSeparators: [',', ' ']
+        })
+    </script>
+{% endblock %}
