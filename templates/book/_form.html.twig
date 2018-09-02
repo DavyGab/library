@@ -1,8 +1,8 @@
 {{ form_start(form) }}
- {{ form_errors(form) }}
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label">Titre</label>
     <div class="col-sm-10">
+        {{ form_errors(form.title) }}
         {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
@@ -10,6 +10,7 @@
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label">Image</label>
     <div class="col-sm-10">
+        {{ form_errors(form.file) }}
         {{ form_widget(form.file) }}
     </div>
   </div>
@@ -17,6 +18,7 @@
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label">ISBN</label>
     <div class="col-sm-10">
+        {{ form_errors(form.isbn) }}
         {{ form_widget(form.isbn, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
@@ -24,6 +26,7 @@
   <div class="form-group row">
     <label for="title" class="col-sm-2 col-form-label">Date de création</label>
     <div class="col-sm-10">
+        {{ form_errors(form.creation_date) }}
         {{ form_widget(form.creation_date, {'attr': {'class': 'form-control'}}) }}
     </div>
   </div>
